@@ -110,7 +110,7 @@ export default function App() {
       <label>Country of Primary Residence</label>
       <input
         defaultValue="United States of America"
-        {...register("country", { required: true })}
+        {...register("country", { required: true, pattern: /^[A-Za-z]+$/i })}
       />
       {/* errors will return when field validation fails  */}
       {errors.country && <span>Country Required</span>}
