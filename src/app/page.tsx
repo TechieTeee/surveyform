@@ -84,7 +84,7 @@ export default function App() {
 
       {/* Label for Age */}
       <label>Age</label>
-      <input defaultValue="65" {...register("age", { required: true })} />
+      <input defaultValue="65" {...register("age", { required: true, min: 18, max: 125 })} />
       {/* errors will return when field validation fails  */}
       {errors.age && <span>Age Required</span>}
 
