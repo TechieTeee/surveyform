@@ -47,6 +47,15 @@ export default function App() {
       <input defaultValue="Doe" {...register("lastName", { required: true, pattern: /^[A-Za-z]+$/i })} />
       {/* errors will return when field validation fails  */}
       {errors.lastName && <span>Last Name Required</span>}
+
+
+      {/* include validation with required or other standard HTML validation rules */}
+         {/* Label for Email */}
+      <label>Email</label>
+      <input defaultValue="JohnDoe@yahoo.com" {...register("email", { required: true})} />
+      {/* errors will return when field validation fails  */}
+      {errors.lastName && <span>Email Required</span>}
+
       <input type="submit" />
     </form>
   );
