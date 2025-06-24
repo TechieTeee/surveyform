@@ -23,12 +23,12 @@ export default function App() {
       {/* Label for First Name */}
       <label>First Name</label>
       {/* Registers Value for First Name*/}
-      <input defaultValue="John" {...register("firstName")} />
+      <input defaultValue="John" {...register("firstName", { required: true, pattern: /^[A-Za-z]+$/i })} />
 
       {/* include validation with required or other standard HTML validation rules */}
          {/* Label for Last Name */}
       <label>Last Name</label>
-      <input {...register("lastName", { required: true })} />
+      <input defaultValue="Doe" {...register("lastName", { required: true, pattern: /^[A-Za-z]+$/i })} />
       {/* errors will return when field validation fails  */}
       {errors.lastName && <span>Last Name Required</span>}
       <input type="submit" />
