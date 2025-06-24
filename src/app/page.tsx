@@ -4,6 +4,22 @@ import { useForm, SubmitHandler } from "react-hook-form";
 type Inputs = {
   firstName: string;
   lastName: string;
+  email: string;
+  phoneNumber: string;
+  dateOfBirth: string;
+  age: number;
+  racialBackground: string;
+  gender: string;
+  country: string;
+  state: string;
+  relationshipStatus: string;
+  primaryInsurance: string;
+  chronicConditions:string;
+  currentSavings: number;
+  monthlyDeposits: number;
+  yearsRetirement: number;
+
+
 };
 
 export default function App() {
