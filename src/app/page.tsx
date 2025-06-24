@@ -40,6 +40,8 @@ export default function App() {
       <label>First Name</label>
       {/* Registers Value for First Name*/}
       <input defaultValue="John" {...register("firstName", { required: true, pattern: /^[A-Za-z]+$/i })} />
+         {/* errors will return when field validation fails  */}
+      {errors.firstName && <span>First Name Required</span>}
 
       {/* include validation with required or other standard HTML validation rules */}
          {/* Label for Last Name */}
@@ -54,7 +56,7 @@ export default function App() {
       <label>Email</label>
       <input defaultValue="JohnDoe@yahoo.com" {...register("email", { required: true})} />
       {/* errors will return when field validation fails  */}
-      {errors.lastName && <span>Email Required</span>}
+      {errors.email && <span>Email Required</span>}
 
       <input type="submit" />
     </form>
