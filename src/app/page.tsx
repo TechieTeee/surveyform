@@ -39,24 +39,50 @@ export default function App() {
       {/* Label for First Name */}
       <label>First Name</label>
       {/* Registers Value for First Name*/}
-      <input defaultValue="John" {...register("firstName", { required: true, pattern: /^[A-Za-z]+$/i })} />
-         {/* errors will return when field validation fails  */}
+      <input
+        defaultValue="John"
+        {...register("firstName", { required: true, pattern: /^[A-Za-z]+$/i })}
+      />
+      {/* errors will return when field validation fails  */}
       {errors.firstName && <span>First Name Required</span>}
 
       {/* include validation with required or other standard HTML validation rules */}
-         {/* Label for Last Name */}
+      {/* Label for Last Name */}
       <label>Last Name</label>
-      <input defaultValue="Doe" {...register("lastName", { required: true, pattern: /^[A-Za-z]+$/i })} />
+      <input
+        defaultValue="Doe"
+        {...register("lastName", { required: true, pattern: /^[A-Za-z]+$/i })}
+      />
       {/* errors will return when field validation fails  */}
       {errors.lastName && <span>Last Name Required</span>}
 
-
       {/* include validation with required or other standard HTML validation rules */}
-         {/* Label for Email */}
+      {/* Label for Email */}
       <label>Email</label>
-      <input defaultValue="JohnDoe@yahoo.com" {...register("email", { required: true})} />
+      <input
+        defaultValue="JohnDoe@yahoo.com"
+        {...register("email", { required: true })}
+      />
       {/* errors will return when field validation fails  */}
       {errors.email && <span>Email Required</span>}
+
+      {/* Label for Phone Number */}
+      <label>Phone Number</label>
+      <input
+        defaultValue="+1 579-809-2728"
+        {...register("phoneNumber", { required: true })}
+      />
+      {/* errors will return when field validation fails  */}
+      {errors.phoneNumber && <span>Phone Number Required</span>}
+
+      {/* Label for Date of Birth */}
+      <label>Date of Birth</label>
+      <input
+        defaultValue="Month/Date/Year Example: 05/08/1962"
+        {...register("dateOfBirth", { required: true })}
+      />
+      {/* errors will return when field validation fails  */}
+      {errors.dateOfBirth && <span>Date of Birth Required</span>}
 
       <input type="submit" />
     </form>
