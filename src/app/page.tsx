@@ -101,7 +101,7 @@ export default function App() {
       <label>Gender Assigned at Birth</label>
       <input
         defaultValue="Female"
-        {...register("gender", { required: true })}
+        {...register("gender", { required: true, pattern: /^[A-Za-z]+$/i })}
       />
       {/* errors will return when field validation fails  */}
       {errors.gender && <span>Gender Required</span>}
